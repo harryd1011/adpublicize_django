@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/index.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-dark">
+
+    <!--navbar-->
+    <section id="nav-bar">
+      {% block content %} 
+      
+      {% include 'navbar.html' %}
+    
+    <!--navbar ends-->
+    </section>
+      <section>
+        <div class="container" style="padding-top: 9%">
+            <div class="row justify-content-center">
+                <div class="col col-md-9 col-lg-7">
+
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h4>
+                                        Registration Details
+                                    </h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>First Name: </p>
+                                </div>
+                                <div class="col-6">
+                                    <p>Harsh</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>Last Name: </p>
+                                </div>
+                                <div class="col-6">
+                                    <p>Dubey</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>E-mail Id: </p>
+                                </div>
+                                <div class="col-6">
+                                    <p>hd35065@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p>Contact Number: </p>
+                                </div>
+                                <div class="col-6">
+                                    <p>9313285561</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <!-- COMMUNICATION DETAILS -->
+                    <div class="card mt-5" style="border-radius: 15px;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h4>Communication Details</h4>
+                                </div>
+
+                                <div class="col d-flex justify-content-end">
+                                        <button type="button" class="nav-link btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            Edit
+                                        </button>   
+                                </div>
+
+                            </div>
+
+                            <!--edit form modal-->
+                            <div class="container">
+                                {% include 'editform.html' %}
+                            </div>
+                            <!--editform modal ends-->
+                            <hr>
+                                <div class="row">
+                                    <div class="col-6">
+                                        Residential Address:
+                                    </div>
+                                    <div class="col-6">
+                                        <p>1, New Devbhumi Society</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        Office Address:
+                                    </div>
+                                    <div class="col-6">
+                                        <p>B-402, Shantideep Residency</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        Office Contact No. :
+                                    </div>
+                                    <div class="col-6">
+                                        <p>9313285561</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        Area:
+                                    </div>
+                                    <div class="col-6">
+                                        <p>New Ranip</p>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        City:
+                                    </div>
+                                    <div class="col-6">
+                                        <p>Ahmedabad</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        Pin-code:
+                                    </div>
+                                    <div class="col-6">
+                                        <p>382480</p>
+
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br>
+      </section>
+      {% endblock %}
+<!--footer-->
+    {% comment %} <section id="footer">
+        {% include 'footer.html' %}
+
+        {% endblock %}
+    </section> {% endcomment %}
+<!--footer ends-->
+  </body>
+  
+</html>

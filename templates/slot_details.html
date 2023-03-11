@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}AD Publicize{%endblock%}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/slot_details.css' %}">
+</head>
+<body>
+
+            <!--Navbar starts-->
+            <section id="nav-bar">
+                {% block content %} 
+      
+                {% include 'navbar.html' %} 
+                
+                
+            </section>
+        <!--Navbar ends-->
+
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+            <h3>AD-Publicize</h3>
+            <p>You are 5 minutes away from booking your slot!</p>
+            <input name="" value="Back" class="btn btn-light" onclick="location.href='/slot';"/><br/>
+        </div>
+        <div class="col-md-9 register-right">
+            {% comment %} <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Hirer</a>
+                </li>
+            </ul> {% endcomment %}
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">Slot Booking Details</h3>
+                        <form class="row register-form" >
+                            <div class="col-md-6">
+                                <div class="form-group"> <!--Edit value fields-->
+                                    <input type="text" class="form-control" placeholder="Name *" value="Harsh Dubey" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Your E-Mail *" value="20ce028@charusat.edu.in" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Organization Name *" value="Bazaar Group" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="Contact Number *" value="93128XXX1" required />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="Office Contact Number *" value="XXX28XX61" required/>
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="Page Number *" value="2" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="Size *" value="3.65 x 3.15" required />
+                                </div>
+                                {% comment %} <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="Position *" value="Top-right corner" required/>
+                                </div> {% endcomment %}
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="Content of advertisement *" value="" required/>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="Prize *" value="600/-" required/>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control"  placeholder="Date *" value="11/03/2023" required/>
+                                </div>
+                                
+                            </div>
+                            <div class="form-check mt-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" required>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    <b>You agree to the Terms & Condition that once the booking is done it won't be cancelled and the payment done will be non-refundable. For further inquiry you may contact the authorities.</b>
+                                </label>
+                            </div>
+                            <input type="submit" class="btnRegister"  value="Make Payment" onclick="location.href='/receipt';" />
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer-->
+<section id="footer">
+    {% include 'footer.html' %}
+
+    {% endblock %}
+</section>
+<!--footer ends-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

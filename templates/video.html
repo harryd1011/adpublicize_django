@@ -1,0 +1,27 @@
+
+{% block content %}
+
+<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">Demo Video</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+                <!--video panel-->
+                    <video width="640" height="360" controls>
+                        <source src="/static/video/demo.mp4" type="video/mp4">
+                        Demo video presented.
+                    </video>
+                <!--video panel ends-->
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+        
+
+

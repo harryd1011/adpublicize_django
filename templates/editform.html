@@ -1,0 +1,60 @@
+{% block content%}
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!--form starts-->
+          <form class="row g-3">
+            <div class="col-md-4">
+              <label for="validationDefault01" class="form-label">Residential address</label>
+              <input type="text" class="form-control" id="validationDefault01" value="1, New Devbhumi Society" required>
+            </div>
+            <div class="col-md-4">
+              <label for="validationDefault02" class="form-label">Office Address</label>
+              <input type="text" class="form-control" id="validationDefault02" value="B-402, Shantideep Residency" required>
+            </div>
+            <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">Office contact number</label>
+                <input type="text" class="form-control" id="validationDefault02" value="9313285561" required>
+            </div>
+            <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">Area</label>
+                <input type="text" class="form-control" id="validationDefault02" value="New Ranip" required>
+              </div>
+              <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">City</label>
+                <input type="text" class="form-control" id="validationDefault02" value="Ahmedabad" required>
+              </div>
+              <div class="col-md-4">
+                <label for="validationDefault02" class="form-label">Pin-code</label>
+                <input type="text" class="form-control" id="validationDefault02" value="382480" required>
+              </div>
+            
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                <label class="form-check-label" for="invalidCheck2">
+                  Agree to terms and conditions
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+          </form>
+          <!--form ends-->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
