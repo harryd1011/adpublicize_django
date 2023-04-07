@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "home.apps.HomeConfig",
+    'adminlte3',
+    'adminlte3_theme',
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -39,6 +41,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
+
+LOGIN_URL = '/login/'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",

@@ -66,12 +66,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="#footer">Contact</a>
               </li>
-              <li type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#signupModal">
-                Register
+              <li class="nav-item">
+                <a class="nav-link" href="/signup">Register</a>
               </li>
-              <li type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#loginModal">
-                Login
-              </li>               
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              {% comment %} <a href="{% url 'delete_users' %}">Delete all users</a>             {% endcomment %}
             </ul>
           </div>  
         </div>
@@ -201,17 +202,10 @@
     </section>
 <!--footer section ends-->
 
-<!-- Sign-Up Modal -->
-<div class="container">
-  {% block content %}
-  
-  {% include 'signup.html' %}
-</div>
-<!--signupmodal ends-->
 
 <!-- Login Modal -->
 <div class="container">
-
+  {% block content %}
   {% include 'login.html'%}
   {% endblock %}
 </div>

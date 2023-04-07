@@ -21,10 +21,13 @@ from .views import download_receipt
 urlpatterns = [
     path("", views.index, name="home"),
     path("dashboard", views.dashboard, name="dashboard"),
+    path("signup", views.signup, name="signup"),
     path("profile", views.profile, name="profile"),
     path("history", views.history, name="history"),
     path("slot", views.slot, name="slot"),
     path("slot_details", views.slot_details, name="slot_details"),
     path("receipt", views.receipt, name="receipt"),
     path('download-receipt/', download_receipt, name='download-receipt'),
+    path('login/', views.login_view, name='login'),
+    # path('delete-users/', views.delete_users, name='delete_users'),
 ]
